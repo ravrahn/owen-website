@@ -1,0 +1,158 @@
+input[type="number"] {
+	width: 3.5em;
+	height: 2em;
+	display: inline-block;
+	background-color: rgba(255,255,255,0.5) !important;
+	border: none;
+	box-shadow: none !important;
+	font-size: 1.5em;
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: 100;
+	padding: 0;
+	padding-left: 0.5em;
+}
+
+input[type="number"]:hover {
+	background-color: rgba(255,255,255,0.6) !important;
+}
+
+input[type="number"]:focus {
+	background-color: rgba(255,255,255,0.75) !important;
+}
+
+#monitor {
+	overflow: hidden;
+	position: relative;
+	border-radius: 0.25em;
+}
+
+#grid {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+}
+
+#grid path {
+	fill: none;
+	stroke: white;
+	stroke-width: 1px;
+	stroke-opacity: 0.25;
+}
+
+#grid path.mon-diag {
+	stroke-opacity: 0.75;
+}
+
+#diagonal {
+	position: absolute;
+	top: calc(50% - 1em);
+	left: calc(50% - 1.5em);
+	width: 3em !important;
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: 100;
+}
+
+#aspect-ratio {
+	position: absolute;
+	top: 0.25em;
+	right: 0.25em;
+	z-index: 100;
+	font-size: 4em;
+	font-weight: 100;
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+
+#dpi-container {
+	position: absolute;
+	top: 0.25em;
+	left: 0.25em;
+	z-index: 100;
+	font-size: 4em;
+	font-weight: 100;
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+#dpi {
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+
+#width {
+	position: absolute;
+	top: 1.5em;
+	left: calc(50% - 2.25em);
+}
+
+#height {
+	position: absolute;
+	top: calc(50% - 1.25em);
+	left: 1.5em;
+}
+
+#buttons {
+	position: absolute;
+	top: 5.5em;
+	right: 1em;
+	width: 7em;
+}
+
+.res-button {
+	font-size: 0.9em;
+	position: relative;
+	display: block;
+	float: right;
+	text-align: right;
+	background-color: rgba(255,255,255,0.5);
+	padding: 0.5em;
+	margin-bottom: 0.25em;
+	cursor: pointer;
+	font-family: "Roboto Condensed", sans-serif;
+	color: black;
+	border-radius: 0.125em;
+	width: 7em;
+}
+
+.res-button:hover {
+	background-color: rgba(255,255,255,0.75);
+	color: black;
+}
+
+.res-ripple {
+	color: black;
+}
+
+#disclaimer {
+	display: none;
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: 300;
+	position: absolute;
+	right: 0;
+	bottom: -1.25em;
+	white-space: nowrap;
+	overflow: visible;
+	text-align: right;
+}
+
+#permalink {
+	color: white;
+	font-family: "Roboto Condensed", sans-serif;
+	position: absolute;
+	bottom: -1.5rem;
+	right: 0;
+}
+
+#permalink-anchor {
+	color: rgba(255,255,255,0.85);
+}
+#permalink-anchor:hover {
+	color: white;
+}
+
+
+#content {
+	padding: 0;
+	margin-top: -0.5rem;
+}
+#content-row {
+	margin: 0;
+}

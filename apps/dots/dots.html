@@ -1,0 +1,86 @@
+{% extends "base-hover-header.html" %}
+{% load i18n staticfiles %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static "css/dots.css"%}" />
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static "js/dots.js" %}"></script>
+{% endblock %}
+
+{% block extra_polymer %}
+<!-- <link rel="import" href="{% static "bower_components/paper-button/paper-button.html" %}"> -->
+{% endblock %}
+
+{% block meta_title %}{% trans "Dots" %}{% endblock %}
+{% block title %}{% trans "Dots" %}{% endblock %}
+
+{% block main %}
+{% blocktrans %}
+<div id="monitor">
+    <svg id="grid" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024px" height="1024px" viewbox="0 0 1024 1024" />
+    <input id="width" type="number" value="1920" min="1" onchange="updateResultsY()" >
+    <input id="height" type="number" value="1200" min="1" onchange="updateResultsX()" >
+    <span id="aspect-ratio">16:10</span>
+    <span id="dpi-container"><span id="dpi">94</span> dpi</span>
+    
+    <input id="diagonal" type="number" value="24" max="200" min="1" onchange="updateResults()" >
+
+    <div id="buttons">
+        <a class="res-button " href="#width=2048&amp;height=1536&amp;diag=9.7" >
+            iPad
+            <paper-ripple class="res-ripple" fit></paper-ripple>
+        </a>
+        <a class="res-button " href="#width=1136&amp;height=640&amp;diag=4" >
+            iPhone 5
+            <paper-ripple class="res-ripple" fit></paper-ripple>
+        </a>
+        <a class="res-button" href="#width=1920&amp;height=1080&amp;diag=5" >
+            HTC One
+            <paper-ripple class="res-ripple" fit></paper-ripple>
+        </a>
+        <a class="res-button" href="#width=3840&amp;height=2160&amp;diag=55" >
+            4K TV
+            <paper-ripple class="res-ripple" fit></paper-ripple>
+        </a>
+        <a class="res-button" href="#width=1920&amp;height=1080&amp;diag=55" >
+            1080p TV
+            <paper-ripple class="res-ripple" fit></paper-ripple>
+        </a>
+        <a class="res-button" href="#width=2560&amp;height=1440&amp;diag=27" >
+            27" Monitor
+            <paper-ripple class="res-ripple" fit></paper-ripple>
+        </a>
+        <a class="res-button" href="#width=1920&amp;height=1200&amp;diag=24" >
+            24" Monitor
+            <paper-ripple class="res-ripple" fit></paper-ripple>
+        </a>
+        <a class="res-button" href="#width=2880&amp;height=1800&amp;diag=15.4" >
+            15" Macbook
+            <paper-ripple class="res-ripple" fit></paper-ripple>
+        </a>
+        <a class="res-button" href="#width=2560&amp;height=1600&amp;diag=13.3" >
+            13" Macbook
+            <paper-ripple class="res-ripple" fit></paper-ripple>
+        </a>
+        <a class="res-button" id="disclaimed" onclick="resThis()" >
+            Your Monitor*
+            <paper-ripple class="res-ripple" fit></paper-ripple>
+        </a>
+
+        <span id="disclaimer">*This is an estimate.</span>
+    </div>
+</div>
+<span id="permalink"><a id="permalink-anchor" href="">Permalink to this monitor</a></span>
+
+<script>
+$("#disclaimed").hover(function(){
+    $("#disclaimer").css("display", "inline");
+},function() {
+    $("#disclaimer").css("display", "none");
+});
+</script>
+
+{% endblocktrans %}
+{% endblock %}
