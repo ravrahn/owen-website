@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owen Cassidy</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+</head>
+<body>
+    <h1>Portfolio</h1>
+    <ul>
+    {% for item in portfolio %}
+        <li><a href={{ item['url'] }}>{{ item['name'] }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
