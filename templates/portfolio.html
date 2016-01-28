@@ -10,7 +10,7 @@
     <h1>Portfolio</h1>
     <ul>
     {% for item in portfolio %}
-        <li><a href={{ item['url'] }}>{{ item['name'] }}</a></li>
+        <li><a href={{ url_for('apps.show_app', app=item['url']) }}>{{ item['name'] }}</a></li>
     {% endfor %}
     </ul>
 </body>
