@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ head(title='Dots', sheets=['dots.css'], scripts=['dots.js']) |safe }}
+</head>
+<body class="dots">
+{{ navbar()|safe }}
+
+<div class="row container">
+    <div class="large-12 large-centered columns">
+        <h2 class="page-heading">Dots</h2>
+        <div class="content">
+            <div id="monitor">
+                <svg id="grid" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024px" height="1024px" viewbox="0 0 1024 1024" ></svg>
+                <input id="width" type="number" value="1920" min="1" onchange="updateResultsY()" >
+                <input id="height" type="number" value="1200" min="1" onchange="updateResultsX()" >
+                <span id="aspect-ratio">16:10</span>
+                <span id="dpi-container"><span id="dpi">94</span> dpi</span>
+                
+                <input id="diagonal" type="number" value="24" max="200" min="1" onchange="updateResults()" >
+
+                <div id="buttons">
+                    <a class="res-button " href="#width=2048&amp;height=1536&amp;diag=9.7" >
+                        iPad
+                    </a>
+                    <a class="res-button " href="#width=1334&amp;height=750&amp;diag=4.7" >
+                        iPhone 6S
+                    </a>
+                    <a class="res-button" href="#width=2560&amp;height=1440&amp;diag=5.7" >
+                        Nexus 6P
+                    </a>
+                    <a class="res-button" href="#width=3840&amp;height=2160&amp;diag=55" >
+                        4K TV
+                    </a>
+                    <a class="res-button" href="#width=1920&amp;height=1080&amp;diag=55" >
+                        1080p TV
+                    </a>
+                    <a class="res-button" href="#width=2560&amp;height=1440&amp;diag=27" >
+                        27" Monitor
+                    </a>
+                    <a class="res-button" href="#width=1920&amp;height=1200&amp;diag=24" >
+                        24" Monitor
+                    </a>
+                    <a class="res-button" href="#width=2880&amp;height=1800&amp;diag=15.4" >
+                        15" Macbook
+                    </a>
+                    <a class="res-button" href="#width=2560&amp;height=1600&amp;diag=13.3" >
+                        13" Macbook
+                    </a>
+                    <a class="res-button" id="disclaimed" onclick="resThis()" >
+                        Your Monitor*
+                    </a>
+
+                    <span id="disclaimer">*This is an estimate.</span>
+                </div>
+            </div>
+            <span id="permalink"><a id="permalink-anchor" href="">Permalink to this monitor</a></span>
+        </div>
+    </div>
+</div>
+
+<script>
+$("#disclaimed").hover(function(){
+    $("#disclaimer").css("display", "inline");
+},function() {
+    $("#disclaimer").css("display", "none");
+});
+</script>
+</body>
+</html>

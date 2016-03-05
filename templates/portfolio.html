@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Owen Cassidy</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+    {{ head(title='Portfolio') |safe }}
 </head>
-<body>
-    <h1>Portfolio</h1>
-    <ul>
-    {% for item in portfolio %}
-        <li><a href={{ url_for('apps.show_app', app=item['url']) }}>{{ item['name'] }}</a></li>
-    {% endfor %}
-    </ul>
+<body class="portfolio">
+    {{ navbar()|safe }}
+    <div class="row container">
+        <div class="large-12 large-centered columns">
+            <h2 class="page-heading">Portfolio</h2>
+            <div class="content">
+            {% for item in portfolio %}
+                <a href={{ url_for('apps.show_app', app=item['url']) }}>
+                    <img src={{ url_for('static', filename='img/' + item['image']) }} >
+                    <h3>{{ item['name'] }}</h3>
+                    <h4 class="date">{{ item['date'] }}</h4>
+                </a>
+                <p>{{ item['desc'] }}</p>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
 </body>
 </html>
