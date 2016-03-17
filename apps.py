@@ -1,4 +1,6 @@
 from flask import Blueprint, abort, redirect, render_template, url_for, request
+from render import render_base_template
+
 
 apps = Blueprint('apps', __name__)
 
@@ -20,4 +22,4 @@ def timetable():
 
 @apps.route('/dots/')
 def dots():
-    return render_template('dots.html')
+    return render_base_template('dots.html', sheets=['dots.css'], scripts=['dots.js'])

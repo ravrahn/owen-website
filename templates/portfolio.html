@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {{ head(title='Portfolio') |safe }}
-</head>
-<body class="portfolio">
-    {{ navbar()|safe }}
+{% extends 'base.html' %}
+{% block title %}Portfolio{% endblock %}
+{% block body_class %}portfolio{% endblock %}
+{% block content %}
     <div class="row container">
         <div class="large-12 large-centered columns">
             <h2 class="page-heading">Portfolio</h2>
@@ -20,5 +17,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}

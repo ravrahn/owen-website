@@ -1,31 +1,11 @@
 import os
 from flask import Flask, redirect, render_template, redirect, url_for
+from render import render_base_template
 
 app = Flask(__name__)
 app.config.from_object('config')
 ctx = app.app_context()
 ctx.push()
-
-def navbar():
-    return render_template('navbar.html',
-        sites=sites)
-app.jinja_env.globals.update(navbar=navbar)
-
-def head(title=None, sheets=[], scripts=[]):
-    page_title = 'Owen Cassidy'
-    if title is not None:
-        page_title = title + ' | ' + page_title
-
-    sheets = ['foundation.css', 'style.css'] + sheets
-
-    scripts = ['jquery-2.2.0.min.js', 'foundation.js'] + scripts
-
-    return render_template('head.html',
-        title=page_title,
-        scripts=scripts,
-        sheets=sheets)
-
-app.jinja_env.globals.update(head=head)
 
 @app.route('/')
 def home():
@@ -33,7 +13,7 @@ def home():
 
 @app.route('/portfolio/')
 def portfolio():
-    return render_template('portfolio.html', portfolio=portfolio_list)
+    return render_base_template('portfolio.html', portfolio=portfolio_list, scripts=['retina.min.js'])
 
 from apps import apps
 
@@ -81,21 +61,6 @@ portfolio_list = [
         'date': '2011-2013',
         'image': 'timetable.png',
         'desc': 'The first major software project I had was an Android app I wrote called Timetable. It stored a high school student’s timetable in a database and displayed it to them. It used an SQLite database, an XML front-end and a Java back-end. Its primary focus was on user interface design, and in creating it I learnt both basic Java and XML.'
-    },
-]
-
-sites = [
-    {
-        'name': 'Etymograph',
-        'url': 'etymograph',
-    },
-    {
-        'name': 'Dots',
-        'url': 'dots',
-    },
-    {
-        'name': 'Connect 4',
-        'url': 'connect-4',
     },
 ]
 

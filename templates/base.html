@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %} | Owen Cassidy</title>
+    <link rel="icon" href={{ url_for('static', filename='img/favicon.png') }}>
+
+    {% for file in sheets %}
+    <link rel="stylesheet" href={{ url_for('static', filename='css/' + file) }}>
+    {% endfor %}
+
+    <script src="https://use.typekit.net/ack6awr.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+<body class="{% block body_class %}{% endblock %}">
+
+
+<div class="top-bar">
+    <div class="top-bar-title top-bar-left">
+        <a href={{ url_for('home') }}>
+            <img class="top-bar-logo" src={{ url_for('static', filename='img/me.jpg') }}>
+            <h1>Owen Cassidy</h1>
+        </a>
+        <span class="menu-icon-container" data-responsive-toggle="menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+    </div>
+    <div class="top-bar-left" id="menu">
+        <ul class="menu medium-horizontal">
+        {% for site in sites %}
+            <li><a href={{ url_for('apps.show_app', app=site['url']) }}>{{ site['name'] }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% block content %}
+{% endblock %}
+
+{% for file in scripts %}
+<script type="text/javascript" src={{ url_for('static', filename='js/' + file) }}></script>
+{% endfor %}
+
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+});
+</script>
+</body>
+</html>

@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {{ head(title='Dots', sheets=['dots.css'], scripts=['dots.js']) |safe }}
-</head>
-<body class="dots">
-{{ navbar()|safe }}
-
+{% extends 'base.html' %}
+{% block title %}Dots{% endblock %}
+{% block body_class %}dots{% endblock %}
+{% block content %}
 <div class="row container">
     <div class="large-12 large-centered columns">
         <h2 class="page-heading">Dots</h2>
@@ -50,21 +46,11 @@
                     <a class="res-button" id="disclaimed" onclick="resThis()" >
                         Your Monitor*
                     </a>
-
-                    <span id="disclaimer">*This is an estimate.</span>
                 </div>
+                <span id="disclaimer">*This is an estimate.</span>
             </div>
             <span id="permalink"><a id="permalink-anchor" href="">Permalink to this monitor</a></span>
         </div>
     </div>
 </div>
-
-<script>
-$("#disclaimed").hover(function(){
-    $("#disclaimer").css("display", "inline");
-},function() {
-    $("#disclaimer").css("display", "none");
-});
-</script>
-</body>
-</html>
+{% endblock %}
