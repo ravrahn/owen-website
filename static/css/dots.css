@@ -95,6 +95,8 @@ input[type=number]::-webkit-outer-spin-button {
 	top: 6.5em;
 	right: 1em;
 	width: 7em;
+    overflow: scroll;
+    max-height: calc(100% - 8.8rem);
 }
 
 .res-button {
@@ -128,10 +130,15 @@ input[type=number]::-webkit-outer-spin-button {
 	font-weight: 300;
 	position: absolute;
 	right: 0;
-	bottom: -1.25em;
+	bottom: 0;
 	white-space: nowrap;
 	overflow: visible;
 	text-align: right;
+    font-size: 1rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem 0;
+    background: rgba(255, 255, 255, 0.75);
+    line-height: 1;
 }
 
 #permalink {
@@ -143,29 +150,19 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #permalink-anchor {
-	color: rgba(255,255,255,0.85);
+	color: #999;
 }
 #permalink-anchor:hover {
-	color: white;
+	color: #333;
 }
 
 .dots .top-bar {
 	background: #4390DF;
 }
 
-.dots .container {
-	width: 1024px;
-}
-
-.dots h2.page-heading {
-	margin-left: 0;
-}
-
 .dots .content {
 	background-color: rgba(67,144,223,0.75);
 	padding: 0;
-	margin: auto;
-	width: 1024px;
 	position: relative;
 }
 

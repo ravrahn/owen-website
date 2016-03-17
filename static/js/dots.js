@@ -376,4 +376,11 @@ $(document).ready(function() {
     changeFontSizes();
 });
 
-$(window).resize(changeFontSizes); 
+$(window).resize(changeFontSizes);
+
+
+$("#disclaimed").hover(function(){
+    $("#disclaimer").css("display", "inline");
+},function() {
+    $("#disclaimer").css("display", "none");
+}); 
