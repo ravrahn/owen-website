@@ -18,10 +18,6 @@ def render_base_template(template, title=None, sheets=[], scripts=[], **kwargs):
             'name': 'Dots',
             'url': 'dots',
         },
-        {
-            'name': 'Connect 4',
-            'url': 'connect-4',
-        },
     ]
 
     return render_template(template,
