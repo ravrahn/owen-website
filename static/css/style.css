@@ -86,13 +86,18 @@ h2.page-heading {
 }
 
 .portfolio .content {
-    background-color: rgba(22,167,101,0.75);
     padding: 0;
     max-width: 1024px;
 }
 
 .portfolio .content * {
     padding: 0 4rem;
+}
+
+.portfolio .item-container {
+    padding: 0;
+    border-radius: 0.25rem;
+    background-color: rgba(22,167,101,0.75);
 }
 
 .portfolio .content a {
@@ -103,6 +108,7 @@ h2.page-heading {
     padding: 0;
     width: 100%;
     border-radius: 0.25rem;
+    border: 1px solid black;
 }
 
 .portfolio h3 {

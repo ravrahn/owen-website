@@ -7,12 +7,14 @@
             <h2 class="page-heading">Portfolio</h2>
             <div class="content">
             {% for item in portfolio %}
-                <a href={{ url_for('apps.show_app', app=item['url']) }}>
-                    <img src={{ url_for('static', filename='img/' + item['image']) }} >
-                    <h3>{{ item['name'] }}</h3>
-                    <h4 class="date">{{ item['date'] }}</h4>
-                </a>
-                <p>{{ item['desc'] }}</p>
+                <div class="item-container">
+                    <a href={{ url_for('apps.show_app', app=item['url']) }}>
+                        <img src={{ url_for('static', filename='img/' + item['image']) }} >
+                        <h3>{{ item['name'] }}</h3>
+                        <h4 class="date">{{ item['date'] }}</h4>
+                        <p>{{ item['desc'] }}</p>
+                    </a>
+                </div>
             {% endfor %}
             </div>
         </div>
