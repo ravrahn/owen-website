@@ -86,7 +86,6 @@ h2.page-heading {
 }
 
 .portfolio .content {
-    padding: 0;
     max-width: 1024px;
 }
 
@@ -134,7 +133,6 @@ h2.page-heading {
 }
 
 .content {
-    padding: 2rem 4rem;
     margin-bottom: 4rem;
     border-radius: 0.25rem;
 }

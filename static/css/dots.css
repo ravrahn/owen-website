@@ -162,7 +162,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 .dots .content {
 	background-color: rgba(67,144,223,0.75);
-	padding: 0;
 	position: relative;
 }
 

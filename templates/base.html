@@ -5,11 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{% endblock %} | Owen Cassidy</title>
-    <link rel="icon" href={{ url_for('static', filename='img/favicon.png') }}>
+    {% block favicon %}<link rel="icon" href={{ url_for('static', filename='img/me.jpg') }}>{% endblock %}
 
     {% for file in sheets %}
-    <link rel="stylesheet" href={{ url_for('static', filename='css/' + file) }}>
-    {% endfor %}
+    <link rel="stylesheet" href={{ url_for('static', filename='css/' + file) }}>{% endfor %}
 
     <script src="https://use.typekit.net/ack6awr.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -39,14 +38,13 @@
 {% block content %}
 {% endblock %}
 
-{% for file in scripts %}
-<script type="text/javascript" src={{ url_for('static', filename='js/' + file) }}></script>
-{% endfor %}
-
-<script>
+{% for file in scripts %}<script type="text/javascript" src={{ url_for('static', filename='js/' + file) }}></script>
+{% if file == 'foundation.min.js' %}<script>
 $(document).ready(function() {
     $(document).foundation();
 });
 </script>
+
+{% endif %}{% endfor %}
 </body>
 </html>
