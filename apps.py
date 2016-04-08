@@ -23,3 +23,7 @@ def timetable():
 @apps.route('/dots/')
 def dots():
     return render_base_template('dots.html', sheets=['dots.css'], scripts=['dots.js'])
+
+@apps.route('/connect4/')
+def connect4():
+    return render_base_template('connect4.html', sheets=['connect4.css', 'qunit-1.20.0.css'], scripts=['modernizr.js', 'board.js', 'ai.js', 'qunit-1.20.0.js', 'tests.js'])

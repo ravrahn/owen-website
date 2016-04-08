@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}Connect 4{% endblock %}
+{% block body_class %}connect4{% endblock %}
+{% block content %}
+
+    <div class="row container">
+        <div class="large-12 large-centered columns">
+            <h2 class="page-heading">Connect 4</h2>
+            <div class="content">
+                <div class="board-container">
+                    <table class="board">
+                        <tr class="row-0">
+                            <td class="col-0"><div class="tile"></div></td>
+                            <td class="col-1"><div class="tile"></div></td>
+                            <td class="col-2"><div class="tile"></div></td>
+                            <td class="col-3"><div class="tile"></div></td>
+                            <td class="col-4"><div class="tile"></div></td>
+                            <td class="col-5"><div class="tile"></div></td>
+                            <td class="col-6"><div class="tile"></div></td>
+                        </tr>
+                        <tr class="row-1">
+                            <td class="col-0"><div class="tile"></div></td>
+                            <td class="col-1"><div class="tile"></div></td>
+                            <td class="col-2"><div class="tile"></div></td>
+                            <td class="col-3"><div class="tile"></div></td>
+                            <td class="col-4"><div class="tile"></div></td>
+                            <td class="col-5"><div class="tile"></div></td>
+                            <td class="col-6"><div class="tile"></div></td>
+                        </tr>
+                        <tr class="row-2">
+                            <td class="col-0"><div class="tile"></div></td>
+                            <td class="col-1"><div class="tile"></div></td>
+                            <td class="col-2"><div class="tile"></div></td>
+                            <td class="col-3"><div class="tile"></div></td>
+                            <td class="col-4"><div class="tile"></div></td>
+                            <td class="col-5"><div class="tile"></div></td>
+                            <td class="col-6"><div class="tile"></div></td>
+                        </tr>
+                        <tr class="row-3">
+                            <td class="col-0"><div class="tile"></div></td>
+                            <td class="col-1"><div class="tile"></div></td>
+                            <td class="col-2"><div class="tile"></div></td>
+                            <td class="col-3"><div class="tile"></div></td>
+                            <td class="col-4"><div class="tile"></div></td>
+                            <td class="col-5"><div class="tile"></div></td>
+                            <td class="col-6"><div class="tile"></div></td>
+                        </tr>
+                        <tr class="row-4">
+                            <td class="col-0"><div class="tile"></div></td>
+                            <td class="col-1"><div class="tile"></div></td>
+                            <td class="col-2"><div class="tile"></div></td>
+                            <td class="col-3"><div class="tile"></div></td>
+                            <td class="col-4"><div class="tile"></div></td>
+                            <td class="col-5"><div class="tile"></div></td>
+                            <td class="col-6"><div class="tile"></div></td>
+                        </tr>
+                        <tr class="row-5">
+                            <td class="col-0"><div class="tile"></div></td>
+                            <td class="col-1"><div class="tile"></div></td>
+                            <td class="col-2"><div class="tile"></div></td>
+                            <td class="col-3"><div class="tile"></div></td>
+                            <td class="col-4"><div class="tile"></div></td>
+                            <td class="col-5"><div class="tile"></div></td>
+                            <td class="col-6"><div class="tile"></div></td>
+                        </tr>
+                    </table>
+                    <div class="victory-overlay">
+                        <span class="victory-text"></span>
+                        <div class="button-container">
+                            <div>New Game</div>
+                            <span>VS:</span>
+                            <button class="button-half button-left red">Human</button><button class="button-half button-right blue">AI</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="qunit"></div>
+                <div id="qunit-fixture"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
