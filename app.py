@@ -23,7 +23,7 @@ portfolio_list = [
     {
         'name': 'Etymograph',
         'url': 'etymograph',
-        'date': '2015-Ongoing',
+        'date': '2015 - Ongoing',
         'image': 'etymograph.png',
         'desc': 'Etymograph is a web service designed to store word etymologies in a structured way. It was originally developed by me and four others as part of a large university project. Since then, I have been the sole developer. It is written in Python 3 using Flask, and makes use of several Javascript libraries for data visualisation. I have made major contributions to the entire web stack for this project, including the database, the backend, and the frontend.'
     },
@@ -50,7 +50,7 @@ portfolio_list = [
     },
     {
         'name': 'Connect 4',
-        'url': 'connect-4',
+        'url': 'connect4',
         'date': '2014, updated 2016',
         'image': 'connect4.png',
         'desc': 'A simple connect four game with a simple min-max AI that I initially built in mid 2014. I updated the algorithm in 2016 to fix some issues that it had.'
