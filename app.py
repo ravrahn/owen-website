@@ -28,18 +28,18 @@ portfolio_list = [
         'desc': 'Etymograph is a web service designed to store word etymologies in a structured way. It was originally developed by me and four others as part of a large university project. Since then, I have been the sole developer. It is written in Python 3 using Flask, and makes use of several Javascript libraries for data visualisation. I have made major contributions to the entire web stack for this project, including the database, the backend, and the frontend.'
     },
     {
-        'name': 'CSESoc',
-        'url': 'csesoc',
-        'date': '2014',
-        'image': 'csesoc.png',
-        'desc': 'In early 2014, I volunteered to help the UNSW Computer Science society to create a new website. I designed the entirely of the site’s front-end, created almost all of the Django HTML templates, and wrote all of the CSS and Javascript. Over the course of creating this website, I taught myself Javascript.'
+        'name': 'Getflix Region Switcher',
+        'url': 'getflix',
+        'date': '2015 - Ongoing',
+        'image': 'getflix.png',
+        'desc': 'Getflix Region Switcher is a Chrome extension written in Javascript and CSS that uses the Getflix API to switch regions for that service. It is currently available on the Chrome web store.'
     },
     {
-        'name': 'Mekong',
-        'url': 'mekong',
-        'date': '2013',
-        'image': 'mekong.png',
-        'desc': 'My first web project was a simple CGI-based bookstore website written in Python, carried out in a software development course. While most students used a simple template such as Bootstrap when designing the front-end, I took it as an opportunity to learn web design and CSS, and wrote all the CSS myself. The back-end was a rudimentary templating engine based on Python string formatting, and was heavily functional. I achieved a nearly-perfect mark for this project.'
+        'name': 'Pingchart',
+        'url': 'pingchart',
+        'date': '2015',
+        'image': 'pingchart.png',
+        'desc': 'A simple terminal application that makes ping more readable.'
     },
     {
         'name': 'Dots',
@@ -54,6 +54,20 @@ portfolio_list = [
         'date': '2014, updated 2016',
         'image': 'connect4.png',
         'desc': 'A simple connect four game with a simple min-max AI that I initially built in mid 2014. I updated the algorithm in 2016 to fix some issues that it had.'
+    },
+    {
+        'name': 'CSESoc',
+        'url': 'csesoc',
+        'date': '2014',
+        'image': 'csesoc.png',
+        'desc': 'In early 2014, I volunteered to help the UNSW Computer Science society to create a new website. I designed the entirely of the site’s front-end, created almost all of the Django HTML templates, and wrote all of the CSS and Javascript. Over the course of creating this website, I taught myself Javascript.'
+    },
+    {
+        'name': 'Mekong',
+        'url': 'mekong',
+        'date': '2013',
+        'image': 'mekong.png',
+        'desc': 'My first web project was a simple CGI-based bookstore website written in Python, carried out in a software development course. While most students used a simple template such as Bootstrap when designing the front-end, I took it as an opportunity to learn web design and CSS, and wrote all the CSS myself. The back-end was a rudimentary templating engine based on Python string formatting, and was heavily functional. I achieved a nearly-perfect mark for this project.'
     },
     {
         'name': 'Timetable',

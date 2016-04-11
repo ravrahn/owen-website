@@ -10,11 +10,19 @@ def show_app(app):
 
 @apps.route('/csesoc/')
 def csesoc():
-    return redirect('http://csesoc.unsw.edu.au/')
+    return redirect('https://csesoc.unsw.edu.au/')
 
 @apps.route('/etymograph/')
 def etymograph():
     return redirect('http://etymograph.com/')
+
+@apps.route('/getflix/')
+def getflix():
+    return redirect('https://chrome.google.com/webstore/detail/getflix-region-switcher/dnglcfmkeagcfmjnhgboabkbjkdnkija')
+
+@apps.route('/pingchart/')
+def pingchart():
+    return redirect('https://github.com/ravrahn/pingchart')
 
 @apps.route('/timetable/')
 def timetable():
