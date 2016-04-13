@@ -18,6 +18,11 @@ def render_base_template(template, title=None, sheets=[], scripts=[], **kwargs):
             'name': 'Dots',
             'url': 'dots',
         },
+        {
+            'name': 'My Github',
+            'url': 'github'
+        },
+
     ]
 
     return render_template(template,

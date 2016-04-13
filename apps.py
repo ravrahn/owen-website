@@ -35,3 +35,7 @@ def dots():
 @apps.route('/connect4/')
 def connect4():
     return render_base_template('connect4.html', sheets=['connect4.css', 'qunit-1.20.0.css'], scripts=['modernizr.js', 'board.js', 'ai.js', 'qunit-1.20.0.js', 'tests.js'])
+
+@apps.route('/github/')
+def github():
+    return redirect('https://github.com/ravrahn/')
