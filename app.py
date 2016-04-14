@@ -48,13 +48,13 @@ portfolio_list = [
         'image': 'dots.png',
         'desc': 'Dots is a static web app I created. It calculates the dots-per-inch of a display given a width and height in pixels, and a diagonal in inches. This web app gave me substantially more experience in Javascript, as well as HTML and CSS.'
     },
-    {
-        'name': 'Connect 4',
-        'url': 'connect4',
-        'date': '2014, updated 2016',
-        'image': 'connect4.png',
-        'desc': 'A simple connect four game with a simple min-max AI that I initially built in mid 2014. I updated the algorithm in 2016 to fix some issues that it had.'
-    },
+    # {
+    #     'name': 'Connect 4',
+    #     'url': 'connect4',
+    #     'date': '2014, updated 2016',
+    #     'image': 'connect4.png',
+    #     'desc': 'A simple connect four game with a simple min-max AI that I initially built in mid 2014. I updated the algorithm in 2016 to fix some issues that it had.'
+    # },
     {
         'name': 'CSESoc',
         'url': 'csesoc',
