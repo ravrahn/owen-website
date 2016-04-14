@@ -127,7 +127,7 @@ input[type=number]::-webkit-outer-spin-button {
 #disclaimer {
 	display: none;
 	font-family: "myriad-pro", sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	position: absolute;
 	right: 0;
 	bottom: 0;

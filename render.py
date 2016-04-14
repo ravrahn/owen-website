@@ -25,9 +25,10 @@ def render_base_template(template, title=None, sheets=[], scripts=[], **kwargs):
 
     ]
 
+    kwargs['title'] = page_title
+    kwargs['scripts'] = scripts
+    kwargs['sheets'] = sheets
+    kwargs['sites'] = sites
+
     return render_template(template,
-        **kwargs,
-        title=page_title,
-        scripts=scripts,
-        sheets=sheets,
-        sites=sites)
+        **kwargs)
