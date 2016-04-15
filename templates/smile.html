@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}:^){% endblock %}
+{% block content %}
+<style>
+.top-bar {
+    background-color: #666;
+}
+
+table {
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    font-size: 10vh;
+}
+
+table, tbody {
+    border: none;
+}
+tbody td {
+    padding: 0.25rem 0.5rem;
+}
+tbody tr:nth-child(even) {
+    background-color: inherit;
+}
+
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+</style>
+
+<div class="row container">
+    <div class="large-12 large-centered columns">
+        <div class="content">
+            <table>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>⁀͕̤</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>(&or;:</td>
+                    <td></td>
+                    <td>:^)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>‿͐̈</td>
+                    <td></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -15,6 +15,11 @@ def home():
 def portfolio():
     return render_base_template('portfolio.html', portfolio=portfolio_list, scripts=['retina.min.js'])
 
+
+@app.route('/‿͐̈/')
+def smile():
+    return render_base_template('smile.html')
+
 from apps import apps
 
 app.register_blueprint(apps, url_prefix='/apps')
