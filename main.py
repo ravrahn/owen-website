@@ -15,6 +15,13 @@ def home():
 def portfolio():
     return render_base_template('portfolio.html', portfolio=portfolio_list, scripts=['retina.min.js'])
 
+@app.route('/cv/')
+def cv():
+    return redirect('/static/cv.pdf')
+
+@app.route('/cv/citizenship/')
+def cv():
+    return redirect('/static/cv-citizenship.pdf')
 
 @app.route('/‿͐̈/')
 def smile():
@@ -35,7 +42,7 @@ portfolio_list = [
     {
         'name': 'Getflix Region Switcher',
         'url': 'getflix',
-        'date': '2015 - Ongoing',
+        'date': '2016',
         'image': 'getflix.png',
         'desc': 'Getflix Region Switcher is a Chrome extension written in Javascript and CSS that uses the Getflix API to switch regions for that service. It is currently available on the Chrome web store.'
     },

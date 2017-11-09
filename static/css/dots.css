@@ -94,7 +94,7 @@ input[type=number]::-webkit-outer-spin-button {
 	position: absolute;
 	top: 6.5em;
 	right: 1em;
-	width: 7em;
+	width: 8em;
     overflow: scroll;
     max-height: calc(100% - 8.8rem);
 }
@@ -112,7 +112,7 @@ input[type=number]::-webkit-outer-spin-button {
 	font-family: "myriad-pro", sans-serif;
 	color: black;
 	border-radius: 0.125em;
-	width: 7em;
+	width: 8em;
 }
 
 .res-button:hover {
