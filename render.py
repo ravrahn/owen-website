@@ -22,7 +22,10 @@ def render_base_template(template, title=None, sheets=[], scripts=[], **kwargs):
             'name': 'My Github',
             'url': 'github'
         },
-
+        {
+            'name': 'My CV',
+            'url': 'cv'
+        },
     ]
 
     kwargs['title'] = page_title

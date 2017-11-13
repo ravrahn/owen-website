@@ -39,3 +39,7 @@ def connect4():
 @apps.route('/github/')
 def github():
     return redirect('https://github.com/ravrahn/')
+
+@apps.route('/cv/')
+def cv():
+    return render_base_template('cv.html')

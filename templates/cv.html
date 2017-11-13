@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Curriculum Vitae{% endblock %}
+{% block body_class %}cv{% endblock %}
+{% block content %}
+    <div class="row container">
+        <div class="large-12 large-centered columns">
+            <h2 class="page-heading">Curriculum Vitae</h2>
+            <object data="/static/cv.pdf" type="application/pdf" class="content" width="100%" height="100%">
+                <a href="/static/cv.pdf">View CV</a>
+            </object>
+        </div>
+    </div>
+{% endblock %}
